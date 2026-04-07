@@ -1,0 +1,95 @@
+:root {
+    /* Theme 1 — Default */
+    --bg-color: #3de0f2;
+    --text-color: #011f26;
+    --accent-color: #8c6645;
+    --card-bg: #43aed9;
+    --header-bg: #3de0f2;
+    --header-text: #8c6645;
+}
+
+.theme-two {
+    --bg-color: #0468bf;
+    --text-color: #035aa6;
+    --accent-color: #176fa6;
+    --card-bg: #d9c8b4;
+    --header-bg: #bfa288;
+    --header-text: #000;
+}
+
+.theme-three {
+    --bg-color: #e6e6e6;
+    --text-color: #f2b807;
+    --accent-color: #f2e205;
+    --card-bg: #3d9df2;
+    --header-bg: #591925;
+    --header-text: #d91e2e;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    /* Smooth theme switching — this makes the color change animate instead of snap */
+    transition: all 0.3s ease;
+}
+
+/* ─── Header Layout — also uses Flexbox (more on this next week!) ─── */
+header {
+    display: flex; /* puts children side by side */
+    justify-content: space-between; /* pushes h1 left, buttons right */
+    align-items: center; /* vertically centers both */
+    padding: 20px 40px;
+    background-color: var(--header-bg);
+    color: var(--header-text);
+}
+
+header h1 {
+    margin: 0;
+}
+
+.theme-buttons button {
+    background-color: var(--accent-color);
+    color: var(--bg-color);
+    border: none;
+    padding: 8px 16px;
+    margin-left: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.card {
+    background-color: var(--card-bg);
+}
+
+/* ─── FLEXBOX TEASER — more on this next week! ─── */
+.cards {
+    display: flex; /* Lines the cards up side by side */
+    gap: 20px; /* Space between each card */
+    padding: 20px 40px 60px;
+}
+
+.card {
+    flex: 1; /* Each card takes up an equal share of the row */
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+    width: 100%; /* Image fills the full width of the card */
+    border-radius: 6px;
+    margin-bottom: 12px;
+}
+
+.card h3 {
+    color: var(--header-text);
+}
+
+/* ─── MOBILE: Stack the cards on small screens ─── */
+@media (max-width: 767px) {
+    .cards {
+        flex-direction: column; /* On mobile, stack cards vertically */
+    }
+}
