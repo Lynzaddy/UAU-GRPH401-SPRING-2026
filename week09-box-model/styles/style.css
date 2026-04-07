@@ -11,7 +11,7 @@ img {
 }
 
 /* Button Style */
-a {
+button {
     display: inline-block;
     background: black;
     color: white;
