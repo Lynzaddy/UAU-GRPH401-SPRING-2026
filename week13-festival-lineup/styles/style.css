@@ -84,6 +84,7 @@ body {
     display: flex;
     /* Challenge 1: add your property here */
     justify-content: center;
+
     /* Challenge 2: update this block for challenge 2 */
     flex-direction: column;
     align-items: center;
